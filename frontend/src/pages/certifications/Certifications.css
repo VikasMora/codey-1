@@ -1,0 +1,642 @@
+/* Certifications Page Styles */
+.certifications-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header Section */
+.header-section {
+  padding: 4rem 0 3rem;
+  text-align: center;
+  color: white;
+}
+
+.page-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title-icon {
+  font-size: 4rem;
+}
+
+.title-highlight {
+  background: linear-gradient(45deg, #ffd700, #ffed4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 0 3rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.stat-icon.earned { background: rgba(255, 215, 0, 0.2); }
+.stat-icon.available { background: rgba(34, 197, 94, 0.2); }
+.stat-icon.skills { background: rgba(59, 130, 246, 0.2); }
+.stat-icon.completion { background: rgba(168, 85, 247, 0.2); }
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: white;
+}
+
+.stat-label {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.8;
+  color: white;
+}
+
+/* Earned Section */
+.earned-section {
+  background: white;
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.download-all-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.earned-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.earned-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.earned-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #667eea;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cert-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.cert-icon.aws { background: #ff9900; }
+.cert-icon.azure { background: #0078d4; }
+.cert-icon.google { background: #4285f4; }
+.cert-icon.google-cloud { background: #4285f4; }
+.cert-icon.google-analytics { background: #e37400; }
+.cert-icon.hubspot { background: #ff7a59; }
+.cert-icon.oracle { background: #f80000; }
+.cert-icon.meta { background: #1877f2; }
+
+.cert-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.cert-badge.earned {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.cert-badge.popular {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.cert-badge.hot {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.cert-badge.trending {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.cert-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.cert-provider {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem;
+  font-weight: 500;
+}
+
+.cert-description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.cert-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.cert-date, .cert-expires {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.cert-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.download-btn, .verify-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.verify-btn {
+  background: white;
+  color: #667eea;
+  border-color: #667eea;
+}
+
+.download-btn:hover, .verify-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Available Section */
+.available-section {
+  background: #f8fafc;
+  padding: 4rem 0;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: white;
+  color: #6b7280;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.tab:hover:not(.active) {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.available-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cert-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: #667eea;
+}
+
+.cert-progress {
+  margin: 1.5rem 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.progress-fill.azure-progress {
+  background: linear-gradient(90deg, #0078d4, #40e0d0);
+}
+
+.progress-fill.oracle-progress {
+  background: linear-gradient(90deg, #f80000, #ff6b6b);
+}
+
+.progress-fill.google-progress {
+  background: linear-gradient(90deg, #4285f4, #34a853);
+}
+
+.progress-fill.meta-progress {
+  background: linear-gradient(90deg, #1877f2, #e91e63);
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 0.875rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.info-value.price {
+  color: #059669;
+  font-weight: 700;
+}
+
+.info-value.price.free {
+  color: #dc2626;
+}
+
+.enroll-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.enroll-btn.azure {
+  background: linear-gradient(135deg, #0078d4, #40e0d0);
+}
+
+.enroll-btn.oracle {
+  background: linear-gradient(135deg, #f80000, #ff6b6b);
+}
+
+.enroll-btn.google {
+  background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
+.enroll-btn.google-cloud {
+  background: linear-gradient(135deg, #4285f4, #0f9d58);
+}
+
+.enroll-btn.meta {
+  background: linear-gradient(135deg, #1877f2, #e91e63);
+}
+
+.enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem;
+}
+
+.cta-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 0 3rem;
+  opacity: 0.9;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #1f2937;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .title-icon {
+    font-size: 3rem;
+  }
+  
+  .page-description {
+    font-size: 1.1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .earned-grid, .available-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-tabs {
+    justify-content: center;
+  }
+  
+  .tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section {
+    padding: 2rem 0;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .earned-section, .available-section {
+    padding: 3rem 0;
+  }
+  
+  .earned-card, .cert-card {
+    padding: 1.5rem;
+  }
+  
+  .cert-actions {
+    flex-direction: column;
+  }
+  
+  .cta-section {
+    padding: 3rem 0;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+}

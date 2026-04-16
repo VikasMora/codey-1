@@ -1,0 +1,519 @@
+/* Python Navbar Styles */
+.py-navbar-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  position: relative;
+}
+
+.py-sidebar {
+  width: 300px;
+  background-color: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.py-sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.py-back-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.py-back-button:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  transform: translateX(-2px);
+}
+
+.py-sidebar-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.py-sidebar-header h2::before {
+  content: "🐍";
+  font-size: 24px;
+}
+
+.py-sidebar-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.py-sidebar-content {
+  padding: 16px 0;
+}
+
+.py-nav-section {
+  margin-bottom: 24px;
+}
+
+.py-nav-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e40af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 20px 8px 20px;
+  margin: 0 0 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.py-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.py-nav-item {
+  margin: 0;
+}
+
+.py-nav-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  text-align: left;
+}
+
+.py-nav-link:hover {
+  background-color: #eff6ff;
+  color: #1e40af;
+  padding-left: 24px;
+}
+
+.py-nav-link.active {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-weight: 600;
+  border-right: 3px solid #3b82f6;
+}
+
+.py-nav-icon {
+  font-size: 16px;
+  margin-right: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.py-nav-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.py-nav-indicator {
+  width: 4px;
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+/* Main Content Area */
+.py-main-content {
+  margin-left: 300px;
+  padding: 32px 40px;
+  flex: 1;
+  background-color: #ffffff;
+  min-height: calc(100vh - 70px);
+  padding-top: 102px;
+}
+
+/* Topic Container Styles */
+.py-topic-container {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.py-topic-header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.py-topic-header h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.py-topic-subtitle {
+  font-size: 20px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Content Sections */
+.py-content-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: 16px;
+  border: 1px solid #93c5fd;
+}
+
+.py-content-header h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e40af;
+  margin: 0 0 16px 0;
+  text-shadow: 0 2px 4px rgba(30, 64, 175, 0.1);
+}
+
+.py-content-subtitle {
+  font-size: 22px;
+  color: #1e40af;
+  margin: 0;
+  font-weight: 500;
+}
+
+.py-content-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.py-content-section {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.py-content-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 16px 0;
+}
+
+.py-content-section p {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Highlight Boxes */
+.py-highlight-box {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.py-highlight-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #92400e;
+  margin: 0 0 12px 0;
+}
+
+.py-highlight-box ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #92400e;
+}
+
+.py-highlight-box li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Feature Grid */
+.py-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.py-feature-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.py-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.py-feature-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 8px 0;
+}
+
+.py-feature-card p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Topic Specific Styles */
+.py-topic-section {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.py-topic-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.py-topic-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 20px 0;
+}
+
+.py-topic-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 24px 0 12px 0;
+}
+
+.py-topic-section p {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Code Blocks */
+.py-code-block {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #374151;
+}
+
+.py-code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Info Boxes */
+.py-info-box {
+  background: #eff6ff;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+}
+
+.py-info-box.warning {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+.py-info-box.success {
+  background: #dcfce7;
+  border-color: #22c55e;
+}
+
+.py-info-box.error {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* Timeline Styles */
+.py-timeline {
+  position: relative;
+  padding-left: 24px;
+  margin: 24px 0;
+}
+
+.py-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3b82f6;
+}
+
+.py-timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 32px;
+}
+
+.py-timeline-year {
+  position: absolute;
+  left: -16px;
+  top: 0;
+  background: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.py-timeline-content h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.py-timeline-content p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Lists */
+.py-topic-section ul, .py-topic-section ol {
+  padding-left: 24px;
+  margin: 16px 0;
+}
+
+.py-topic-section li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Tables */
+.py-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.py-table th {
+  background: #1e40af;
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.py-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.py-table tr:last-child td {
+  border-bottom: none;
+}
+
+.py-table tr:hover {
+  background: #f8fafc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .py-sidebar {
+    width: 280px;
+  }
+  
+  .py-main-content {
+    margin-left: 280px;
+    padding: 24px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .py-sidebar {
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .py-sidebar.open {
+    left: 0;
+  }
+  
+  .py-main-content {
+    margin-left: 0;
+    padding: 16px 20px;
+  }
+  
+  .py-content-header h1 {
+    font-size: 36px;
+  }
+  
+  .py-content-subtitle {
+    font-size: 18px;
+  }
+  
+  .py-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
